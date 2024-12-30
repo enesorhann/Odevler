@@ -7,12 +7,11 @@ class Users {
   late String userName;
   late String password;
   File? imageFile;
-  Harcamalar? harcamalar;
 
   Users(
       {required this.userID,
       required this.userName,
       required this.password,
       required this.imageFile,
-      this.harcamalar});
+      });
 }

@@ -120,9 +120,11 @@ class _AyarlarState extends State<Ayarlar> {
         backgroundColor: Colors.lightBlueAccent,
         foregroundColor: Colors.white,
         onPressed: () {
-          var imagePath = selectedImage?.path;
-          Services()
-              .guncelle(widget.user.userID, uName.text, pasw.text, imagePath);
+          if(key.currentState!.validate()){
+            var imagePath = selectedImage?.path;
+            Services()
+                .guncelle(widget.user.userID, uName.text, pasw.text, imagePath);
+          }
         },
         icon: Icon(Icons.update_outlined),
         label: Text("Guncelle"),

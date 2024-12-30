@@ -16,15 +16,8 @@ class Hesaplama extends StatefulWidget {
 class _HesaplamaState extends State<Hesaplama> {
 
   Future<List<Harcamalar>> tumHarcamalar() async {
-    var harcamalarListesi = <Harcamalar>[];
-    harcamalarListesi = await Services().getGelirGiderByUserID(widget.userID);
+    var harcamalarListesi = await Services().getGelirGiderByUserID(widget.userID);
     return harcamalarListesi;
-  }
-
-  @override
-  void initState() {
-    super.initState();
-    tumHarcamalar();
   }
 
   @override
